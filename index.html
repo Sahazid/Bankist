@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BANKIST</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+     <!-- Modal Box -->
+    <div id="modal-box" class="w-full z-50 bg-black/50 h-screen hidden justify-center items-center fixed">
+      <div id="close-modal-btn" 
+        class="relative p-14 bg-[#F3F3F3] flex flex-col gap-8  justify-center items-center"
+      >
+        <i onclick="closeModal()"
+          class="fa-solid fa-xmark absolute top-3 text-2xl flex ml-[450px] cursor-pointer"
+        ></i>
+
+        <h1 class="text-3xl font-medium text-[#3e3e3e]">
+          Open your bank account <br />
+          in just
+          <span
+            style="clip-path: polygon(9% 0, 100% 0, 90% 100%, 0% 100%)"
+            class="bg-gradient-to-tl from-[#A8E08F] to-[#89D29B] pr-3 pl-4 "
+            >5 minutes</span
+          >
+        </h1>
+        <ol class="flex flex-col justify-center items-center gap-5 relative ">
+          <li>
+            <label for="" class="p-[33px]">First Name</label>
+            <input class="h-9 rounded-md" type="text" />
+          </li>
+          <li>
+            <label for="" class="p-[33px]">Last Name</label>
+            <input class="h-9 rounded-md" type="text" />
+          </li>
+          <li>
+            <label for="" class="p-[20px]">Email Address</label>
+            <input class="h-9 rounded-md" type="text" />
+          </li>
+        </ol>
+
+        <a
+          href=""
+          class="bg-[#5EC576] text-black pt-[13px] pb-[13px] pl-[24px] pr-[24px] rounded-3xl"
+          ><button>Next step →</button></a
+        >
+      </div>
+    </div>
+
+    <main id="main-box">
+
+     
+
+
+
+      <nav
+        class="flex justify-around w-[99vw] items-center gap-[40%] text-[#444444] p-4 fixed bg-white z-30"
+      >
+        <img
+          id="nabar-logo-image"
+          class="h-[3.2rem]"
+          src="./img/logo.png"
+          alt=""
+        />
+
+        <ol class="nav-btns flex gap-10 text-[18px] items-center">
+          <a id="features-btn" href="#feature-section"><li>Features</li></a>
+          <a id="operation-btn" href="#operation-section"
+            ><li>Operations</li></a
+          >
+          <a id="testimonial-btn" href="#testimonial-section"
+            ><li>Testimonials</li></a
+          >
+          <button onclick="modal()"
+            id="navbar-open-account-btn"
+            href=""
+            class="bg-[#5EC576] text-black pt-[13px] pb-[13px] pl-[24px] pr-[24px] rounded-3xl"
+            ><li>Open Account</li></button
+          >
+          <!-- <button class="bg-[#5EC576] pt-[8px] pb-[8px] pl-[10px] pr-[10px]">Open Account</button> -->
+        </ol>
+      </nav>
+
+      <!-- Hero Section start -->
+
+      <section
+        id="hero-section"
+        class="flex justify-around items-center h-screen"
+      >
+        <div class="flex justify-center items-center ">
+          <div class="flex flex-col gap-4">
+            <h1
+              class="text-5xl w-[17em] font-medium text-[#444444] leading-tight"
+            >
+              When<span
+                style="clip-path: polygon(9% 0, 100% 0, 90% 100%, 0% 100%)"
+                class="bg-gradient-to-tl from-[#A8E08F] to-[#89D29B] pr-5 pl-8"
+              >
+                banking </span
+              >meets
+              <span
+                style="clip-path: polygon(9% 0, 100% 0, 90% 100%, 0% 100%)"
+                class="bg-gradient-to-tl from-[#A8E08F] to-[#89D29B] pr-5 pl-8 opacity-90"
+                >minimalist</span
+              >
+            </h1>
+            <h3 class="text-2xl font-medium text-[#444444]">
+              A simpler banking experience for a simpler life.
+            </h3>
+            <div>
+              <a href="#feature-section" class="text-[#5EC576] flex flex-col">Learn more ↓ <span class="w-[6.5rem] border-[0.5px] border-[#5EC576]"></span></a>
+              
+            </div>
+          </div>
+          <div>
+            <img class="h-[25rem]" src="./img/hero.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Hero Section End  -->
+
+      <div class="border-[1px] text-[#444444]"></div>
+
+      <!-- Features Section Start -->
+      <section id="feature-section" class="bg-[#F3F3F3]">
+        <div class="pt-[10%] pb-[5%] text-[#444444]">
+          <div class="flex flex-1 flex-col justify-center items-center">
+            <div class="space-y-5">
+              <span class="text-[#35ba54] font-semibold text-xl">FEATURES</span>
+              <h1 class="flex flex-col text-[#444444] text-3xl font-medium">
+                Everything you need in a modern bank <br />
+                and more.
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="pb-[10%]">
+          <div 
+            class="feature-sec flex justify-center items-center pr-[10%] pl-[10%] pb-11 gap-20"
+          >
+            <div><img class="w-[80rem] lazy-img" src="./img/digital-lazy.jpg" data-src="./img/digital.jpg" alt="" />
+           </div>
+
+            <div class="flex flex-col gap-5">
+              <div
+                class="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center"
+              >
+                <i class="fa-solid fa-display text-green-600 text-3xl"></i>
+              </div>
+              <h1 class="text-[#444444] font-medium text-2xl">
+                100% digital bank
+              </h1>
+              <p class="text-[#444444] font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                quia adipisci asperiores ut impedit fugit facere ad vel ab aut
+                ratione aliquid, mollitia alias repellat nostrum maiores laborum
+                doloribus? Quibusdam.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="feature-sec flex justify-center items-center pr-[10%] pl-[10%] pb-11 gap-36"
+          >
+            <div class=" flex flex-col gap-5">
+              <div
+                class="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center"
+              >
+                <i
+                  class="fa-solid fa-arrow-trend-up text-green-600 text-3xl"
+                ></i>
+              </div>
+              <h1 class="text-[#444444] font-medium text-2xl">
+                Watch your money grow
+              </h1>
+              <p class="text-[#444444] font-light">
+                Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
+                inventore ab? Nulla incidunt eius numquam sequi iste pariatur
+                quibusdam!
+              </p>
+            </div>
+
+            <div><img class="w-[80rem] lazy-img" src="./img/grow-lazy.jpg" data-src="./img/grow.jpg" alt="" /></div>
+          </div>
+
+          <div
+            class=" feature-sec flex justify-center items-center pr-[10%] pl-[10%] gap-20"
+          >
+            <div><img class="w-[80rem] lazy-img" src="./img/card-lazy.jpg" data-src="./img/card.jpg" alt="" /></div>
+
+            <div class="flex flex-col gap-5">
+              <div
+                class="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center"
+              >
+                <i
+                  class="fa-regular fa-credit-card text-green-600 text-3xl"
+                ></i>
+              </div>
+              <h1 class="text-[#444444] font-medium text-2xl">
+                Free debit card included
+              </h1>
+              <p class="text-[#444444] font-light">
+                Quasi, fugit in cumque cupiditate reprehenderit debitis animi
+                enim eveniet consequatur odit quam quos possimus assumenda dicta
+                fuga inventore ab.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-[1px] text-[#444444]"></div>
+      </section>
+
+      <!-- Features Section End -->
+
+      <!-- Operation Section Start -->
+      <section id="operation-section" class="feature-sec bg-[#F3F3F3]">
+        <div class="pt-[10%] pb-[5%] text-[#444444]">
+          <div class="flex flex-1 flex-col justify-center items-center">
+            <div class="space-y-5">
+              <span class="text-[#35ba54] font-semibold text-xl"
+                >Operations</span
+              >
+              <h1 class="flex flex-col text-[#444444] text-3xl font-medium">
+                Everything as simple as possible, but <br />
+                no simpler.
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto bg-gray-100 font-sans pb-[10%]">
+          <div
+            class="flex space-x-4 mb-[-20px] relative z-10 pl-8 justify-center"
+          >
+            <button
+              class="bg-amber-400 text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 shadow-sm"
+            >
+              <span class="font-bold">01</span> Instant Transfers
+            </button>
+            <button
+              class="bg-emerald-500 text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 shadow-sm"
+            >
+              <span class="font-bold">02</span> Instant Loans
+            </button>
+            <button
+              class="bg-red-500 text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 shadow-sm"
+            >
+              <span class="font-bold">03</span> Instant Closing
+            </button>
+          </div>
+
+          <div
+            class="bg-white rounded-lg p-14 shadow-sm pt-12 flex items-center justify-center"
+          >
+            <div class="flex items-start gap-6">
+              <div class="flex gap-6 hidden">
+                <div
+                  class="bg-orange-100 w-14 h-14 rounded-full flex items-center justify-center"
+                >
+                  <i
+                    class="fa-solid fa-arrow-up-from-bracket text-orange-400 text-3xl"
+                  ></i>
+                </div>
+                <div class="space-y-4 max-w-2xl">
+                  <h2 class="text-2xl font-bold text-gray-800">
+                    Transfer money to anyone, instantly! No fees, no BS.
+                  </h2>
+                  <p class="text-gray-500 leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-6 hidden">
+                <div
+                  class="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center"
+                >
+                  <i class="fa-regular fa-house text-green-400 text-3xl"></i>
+                </div>
+                <div class="space-y-4 max-w-2xl">
+                  <h2 class="text-2xl font-bold text-gray-800">
+                    Transfer money to anyone, instantly! No fees, no BS.
+                  </h2>
+                  <p class="text-gray-500 leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-6">
+                <div
+                  class="bg-red-100 w-14 h-14 rounded-full flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-user-xmark text-3xl text-red-400"></i>
+                </div>
+                <div class="space-y-4 max-w-2xl">
+                  <h2 class="text-2xl font-bold text-gray-800">
+                    Transfer money to anyone, instantly! No fees, no BS.
+                  </h2>
+                  <p class="text-gray-500 leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-[1px] text-[#444444]"></div>
+      </section>
+
+      <!-- Testimonial Section -->
+      <section id="testimonial-section" class="feature-sec bg-[#F3F3F3]">
+        <div class="pt-[10%] pb-[5%] text-[#444444]">
+          <div class="flex flex-1 flex-col justify-center items-center">
+            <div class="space-y-5">
+              <span class="text-[#35ba54] font-semibold text-xl"
+                >Not sure yet?</span
+              >
+              <h1 class="flex flex-col text-[#444444] text-3xl font-medium">
+                Millions of Bankists are already making <br />
+                their lifes simpler.
+              </h1>
+            </div>
+
+            <div
+              class="flex justify-center items-center gap-10 transition: left right 0.5s ease-out"
+            >
+              <div
+                class="w-16 h-16 bg-gray-200 rounded-full flex justify-center items-center"
+              >
+                <i class="fa-solid fa-arrow-left text-3xl text-[#444444]"></i>
+              </div>
+
+              <!-- Testimonial Card -->
+              <div
+                class="mt-[3%] flex flex-col max-w-[40%] p-5 gap-5 justify-center items-start"
+              >
+                <h2 class="text-3xl font-medium">
+                  Best financial decision ever!
+                </h2>
+
+                <p class="text-justify font-light">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Accusantium quas quisquam non? Quas voluptate nulla minima
+                  deleniti optio ullam nesciunt, numquam corporis et asperiores
+                  laboriosam sunt, praesentium suscipit blanditiis.
+                  Necessitatibus id alias reiciendis, perferendis facere
+                  pariatur dolore veniam autem esse non voluptatem saepe
+                  provident nihil molestiae.
+                </p>
+              </div>
+              <div
+                class="w-16 h-16 bg-gray-200 rounded-full flex justify-center items-center"
+              >
+                <i class="fa-solid fa-arrow-right text-3xl text-[#444444]"></i>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-6 w-[33%]">
+              <div class="overflow-hidden h-16 w-16 rounded-full">
+                <img src="./img/user-1.jpg"  alt="" />
+              </div>
+              <div>
+                <h1>Aarav Lynn</h1>
+                <p>San Francisco, USA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+
+      <section class="bg-[#37383D] feature-sec">
+        <div class="pt-[5%] pb-[5%] text-[#444444]">
+          <div class="flex flex-1 flex-col justify-center items-center gap-16">
+            <div class="space-y-5">
+              <h1
+                class="flex flex-col text-white text-4xl font-medium leading-tight"
+              >
+                The best day to join Bankist was one <br />
+                year ago. The second best is today!
+              </h1>
+            </div>
+            <button onclick="modal()"
+              id="footer-open-account-btn"
+              href=""
+              class="bg-[#5EC576] text-black pt-[13px] pb-[13px] pl-[24px] pr-[24px] rounded-3xl list-none"
+              ><li>Open your free account today</li></button
+            >
+          </div>
+        </div>
+        <div class="border-[1px] border-[#47474a]"></div>
+
+          <footer>
+        <div class="bg-[#37383D] pt-[5%] pb-[8%]">
+          <div class="flex justify-center items-center flex-col gap-14">
+            <div>
+              <ol class="flex justify-around items-center gap-12 text-white">
+                <li>About</li>
+                <li>Price</li>
+                <li>Terms of use</li>
+                <li>Privacy Policy</li>
+                <li>Careers</li>
+                <li>Blog</li>
+                <li>Contact Us</li>
+              </ol>
+            </div>
+            <div>
+              <img src="./img/icon.png" alt="" />
+            </div>
+            <h3>
+              <span class="text-[#6f6c6c]">© Copyright by</span>
+              <span class="text-white">Sahazid Hossen</span>
+            </h3>
+          </div>
+        </div>
+      </footer>
+      </section>
+
+    
+
+   
+
+    </main>
+
+    
+
+    <script src="./script.js"></script>
+  </body>
+</html>
