@@ -20,12 +20,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-     <!-- Modal Box -->
-    <div id="modal-box" class="w-full z-50 bg-black/50 h-screen hidden justify-center items-center fixed">
-      <div id="close-modal-btn" 
-        class="relative p-14 bg-[#F3F3F3] flex flex-col gap-8  justify-center items-center"
+    <!-- Modal Box -->
+    <div
+      id="modal-box"
+      class="w-full z-50 bg-black/50 h-screen hidden justify-center items-center fixed"
+    >
+      <div
+        id="close-modal-btn"
+        class="relative p-14 bg-[#F3F3F3] flex flex-col gap-8 justify-center items-center"
       >
-        <i onclick="closeModal()"
+        <i
+          onclick="closeModal()"
           class="fa-solid fa-xmark absolute top-3 text-2xl flex ml-[450px] cursor-pointer"
         ></i>
 
@@ -34,11 +39,11 @@
           in just
           <span
             style="clip-path: polygon(9% 0, 100% 0, 90% 100%, 0% 100%)"
-            class="bg-gradient-to-tl from-[#A8E08F] to-[#89D29B] pr-3 pl-4 "
+            class="bg-gradient-to-tl from-[#A8E08F] to-[#89D29B] pr-3 pl-4"
             >5 minutes</span
           >
         </h1>
-        <ol class="flex flex-col justify-center items-center gap-5 relative ">
+        <ol class="flex flex-col justify-center items-center gap-5 relative">
           <li>
             <label for="" class="p-[33px]">First Name</label>
             <input class="h-9 rounded-md" type="text" />
@@ -62,11 +67,6 @@
     </div>
 
     <main id="main-box">
-
-     
-
-
-
       <nav
         class="flex justify-around w-[99vw] items-center gap-[40%] text-[#444444] p-4 fixed bg-white z-30"
       >
@@ -85,12 +85,14 @@
           <a id="testimonial-btn" href="#testimonial-section"
             ><li>Testimonials</li></a
           >
-          <button onclick="modal()"
+          <button
+            onclick="modal()"
             id="navbar-open-account-btn"
             href=""
             class="bg-[#5EC576] text-black pt-[13px] pb-[13px] pl-[24px] pr-[24px] rounded-3xl"
-            ><li>Open Account</li></button
           >
+            <li>Open Account</li>
+          </button>
           <!-- <button class="bg-[#5EC576] pt-[8px] pb-[8px] pl-[10px] pr-[10px]">Open Account</button> -->
         </ol>
       </nav>
@@ -101,7 +103,7 @@
         id="hero-section"
         class="flex justify-around items-center h-screen"
       >
-        <div class="flex justify-center items-center ">
+        <div class="flex justify-center items-center">
           <div class="flex flex-col gap-4">
             <h1
               class="text-5xl w-[17em] font-medium text-[#444444] leading-tight"
@@ -122,8 +124,10 @@
               A simpler banking experience for a simpler life.
             </h3>
             <div>
-              <a href="#feature-section" class="text-[#5EC576] flex flex-col">Learn more ↓ <span class="w-[6.5rem] border-[0.5px] border-[#5EC576]"></span></a>
-              
+              <a href="#feature-section" class="text-[#5EC576] flex flex-col"
+                >Learn more ↓
+                <span class="w-[6.5rem] border-[0.5px] border-[#5EC576]"></span
+              ></a>
             </div>
           </div>
           <div>
@@ -151,11 +155,17 @@
         </div>
 
         <div class="pb-[10%]">
-          <div 
+          <div
             class="feature-sec flex justify-center items-center pr-[10%] pl-[10%] pb-11 gap-20"
           >
-            <div><img class="w-[80rem] lazy-img" src="./img/digital-lazy.jpg" data-src="./img/digital.jpg" alt="" />
-           </div>
+            <div>
+              <img
+                class="w-[80rem] lazy-img"
+                src="./img/digital-lazy.jpg"
+                data-src="./img/digital.jpg"
+                alt=""
+              />
+            </div>
 
             <div class="flex flex-col gap-5">
               <div
@@ -178,7 +188,7 @@
           <div
             class="feature-sec flex justify-center items-center pr-[10%] pl-[10%] pb-11 gap-36"
           >
-            <div class=" flex flex-col gap-5">
+            <div class="flex flex-col gap-5">
               <div
                 class="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center"
               >
@@ -196,13 +206,27 @@
               </p>
             </div>
 
-            <div><img class="w-[80rem] lazy-img" src="./img/grow-lazy.jpg" data-src="./img/grow.jpg" alt="" /></div>
+            <div>
+              <img
+                class="w-[80rem] lazy-img"
+                src="./img/grow-lazy.jpg"
+                data-src="./img/grow.jpg"
+                alt=""
+              />
+            </div>
           </div>
 
           <div
-            class=" feature-sec flex justify-center items-center pr-[10%] pl-[10%] gap-20"
+            class="feature-sec flex justify-center items-center pr-[10%] pl-[10%] gap-20"
           >
-            <div><img class="w-[80rem] lazy-img" src="./img/card-lazy.jpg" data-src="./img/card.jpg" alt="" /></div>
+            <div>
+              <img
+                class="w-[80rem] lazy-img"
+                src="./img/card-lazy.jpg"
+                data-src="./img/card.jpg"
+                alt=""
+              />
+            </div>
 
             <div class="flex flex-col gap-5">
               <div
@@ -250,16 +274,22 @@
             class="flex space-x-4 mb-[-20px] relative z-10 pl-8 justify-center"
           >
             <button
+              id="instant-transfer-btn"
+              onclick="instantTransferContent()"
               class="bg-amber-400 text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 shadow-sm"
             >
               <span class="font-bold">01</span> Instant Transfers
             </button>
             <button
+              id="instant-loan-btn"
+              onclick="instantLoanContent()"
               class="bg-emerald-500 text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 shadow-sm"
             >
               <span class="font-bold">02</span> Instant Loans
             </button>
             <button
+              id="instant-closing-btn"
+              onclick="instantClosingContent()"
               class="bg-red-500 text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 shadow-sm"
             >
               <span class="font-bold">03</span> Instant Closing
@@ -270,7 +300,7 @@
             class="bg-white rounded-lg p-14 shadow-sm pt-12 flex items-center justify-center"
           >
             <div class="flex items-start gap-6">
-              <div class="flex gap-6 hidden">
+              <div id="instant-transfer" class="flex gap-6">
                 <div
                   class="bg-orange-100 w-14 h-14 rounded-full flex items-center justify-center"
                 >
@@ -291,7 +321,7 @@
                 </div>
               </div>
 
-              <div class="flex gap-6 hidden">
+              <div id="instant-loan" class="flex gap-6 hidden">
                 <div
                   class="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center"
                 >
@@ -299,18 +329,19 @@
                 </div>
                 <div class="space-y-4 max-w-2xl">
                   <h2 class="text-2xl font-bold text-gray-800">
-                    Transfer money to anyone, instantly! No fees, no BS.
+                    Buy a home or make your dreams come true, with instant
+                    loans.
                   </h2>
                   <p class="text-gray-500 leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
                   </p>
                 </div>
               </div>
 
-              <div class="flex gap-6">
+              <div id="instant-closing" class="flex gap-6 hidden">
                 <div
                   class="bg-red-100 w-14 h-14 rounded-full flex items-center justify-center"
                 >
@@ -318,13 +349,13 @@
                 </div>
                 <div class="space-y-4 max-w-2xl">
                   <h2 class="text-2xl font-bold text-gray-800">
-                    Transfer money to anyone, instantly! No fees, no BS.
+                    No longer need your account? No problem! Close it instantly.
                   </h2>
                   <p class="text-gray-500 leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
                 </div>
               </div>
@@ -337,62 +368,141 @@
 
       <!-- Testimonial Section -->
       <section id="testimonial-section" class="feature-sec bg-[#F3F3F3]">
-        <div class="pt-[10%] pb-[5%] text-[#444444]">
+        <div class="pt-[10%] text-[#444444]">
           <div class="flex flex-1 flex-col justify-center items-center">
             <div class="space-y-5">
               <span class="text-[#35ba54] font-semibold text-xl"
                 >Not sure yet?</span
               >
-              <h1 class="flex flex-col text-[#444444] text-3xl font-medium">
+              <h1 class="flex flex-col text-[#444444] text-4xl font-medium">
                 Millions of Bankists are already making <br />
                 their lifes simpler.
               </h1>
             </div>
+          </div>
+        </div>
 
+        <div class="relative max-w-[60rem] bottom-[8rem] mx-auto">
+          <!-- Left Arrow -->
+          <button
+            id="arrow-left"
+            class="absolute left-0 top-[20rem] z-10 w-12 h-12 bg-gray-400 rounded-full opacity-70"
+          >
+            <i class="fa-solid fa-arrow-left text-black"></i>
+          </button>
+
+          <!-- Slider -->
+          <div class="max-w-[40rem] h-[48rem] mx-auto overflow-hidden">
+            <!-- Slides container -->
             <div
-              class="flex justify-center items-center gap-10 transition: left right 0.5s ease-out"
+              id="slides"
+              class="flex h-full transition-transform duration-500 ease-in-out"
             >
+              <!-- Testimonial slide-->
               <div
-                class="w-16 h-16 bg-gray-200 rounded-full flex justify-center items-center"
+                class="testimonial-section min-w-full flex flex-col gap-7 justify-center"
               >
-                <i class="fa-solid fa-arrow-left text-3xl text-[#444444]"></i>
-              </div>
-
-              <!-- Testimonial Card -->
-              <div
-                class="mt-[3%] flex flex-col max-w-[40%] p-5 gap-5 justify-center items-start"
-              >
-                <h2 class="text-3xl font-medium">
+                <h2 class="text-2xl text-[#545559]">
                   Best financial decision ever!
                 </h2>
 
-                <p class="text-justify font-light">
+                <p class="font-light text-[#545559]">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Accusantium quas quisquam non? Quas voluptate nulla minima
                   deleniti optio ullam nesciunt, numquam corporis et asperiores
                   laboriosam sunt, praesentium suscipit blanditiis.
-                  Necessitatibus id alias reiciendis, perferendis facere
-                  pariatur dolore veniam autem esse non voluptatem saepe
-                  provident nihil molestiae.
                 </p>
-              </div>
-              <div
-                class="w-16 h-16 bg-gray-200 rounded-full flex justify-center items-center"
-              >
-                <i class="fa-solid fa-arrow-right text-3xl text-[#444444]"></i>
-              </div>
-            </div>
 
-            <div class="flex items-center gap-6 w-[33%]">
-              <div class="overflow-hidden h-16 w-16 rounded-full">
-                <img src="./img/user-1.jpg"  alt="" />
+                <div>
+                  <img
+                    class="w-14 h-14 rounded-full"
+                    src="./img/user-1.jpg"
+                    alt=""
+                  />
+
+                  <h4 class="text-[#545559]">Aarav Lynn</h4>
+
+                  <p class="text-[#545559] font-light">San Francisco, USA</p>
+                </div>
               </div>
-              <div>
-                <h1>Aarav Lynn</h1>
-                <p>San Francisco, USA</p>
+
+             
+              <div
+                class="testimonial-section min-w-full flex flex-col gap-7 justify-center"
+              >
+                <h2 class="text-2xl text-[#545559]">
+                  The last step to becoming a complete minimalist
+                </h2>
+
+                <p class="font-light text-[#545559]">
+                  Quisquam itaque deserunt ullam, quia ea repellendus provident,
+                  ducimus neque ipsam modi voluptatibus doloremque, corrupti
+                  laborum. Incidunt numquam perferendis veritatis neque
+                  repellendus.
+                </p>
+
+                <div>
+                  <img
+                    class="w-14 h-14 rounded-full"
+                    src="./img/user-2.jpg"
+                    alt=""
+                  />
+
+                  <h4 class="text-[#545559]">Aarav Lynn</h4>
+
+                  <p class="text-[#545559] font-light">San Francisco, USA</p>
+                </div>
+              </div>
+
+            
+              <div
+                class="testimonial-section min-w-full flex flex-col gap-7 justify-center"
+              >
+                <h2 class="text-2xl text-[#545559]">
+                  Finally free from old-school banks
+                </h2>
+
+                <p class="font-light text-[#545559]">
+                  Debitis, nihil sit minus suscipit magni aperiam vel tenetur
+                  incidunt commodi architecto numquam omnis nulla autem,
+                  necessitatibus blanditiis modi similique quidem.
+                </p>
+
+                <div>
+                  <img
+                    class="w-14 h-14 rounded-full"
+                    src="./img/user-3.jpg"
+                    alt=""
+                  />
+
+                  <h4 class="text-[#545559]">Aarav Lynn</h4>
+
+                  <p class="text-[#545559] font-light">San Francisco, USA</p>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- Right Arrow -->
+          <button
+            id="arrow-right"
+            class="absolute right-0 top-[20rem] z-10 w-12 h-12 bg-gray-400 rounded-full opacity-70"
+          >
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+         
+          <ul id="dots" class="flex justify-center items-center gap-5 mt-[-10.75rem]">
+            <li
+              class="dot w-3 h-3 bg-gray-900 rounded-full cursor-pointer"
+            ></li>
+            <li
+              class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"
+            ></li>
+            <li
+              class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"
+            ></li>
+          </ul>
         </div>
       </section>
 
@@ -409,49 +519,44 @@
                 year ago. The second best is today!
               </h1>
             </div>
-            <button onclick="modal()"
+            <button
+              onclick="modal()"
               id="footer-open-account-btn"
               href=""
               class="bg-[#5EC576] text-black pt-[13px] pb-[13px] pl-[24px] pr-[24px] rounded-3xl list-none"
-              ><li>Open your free account today</li></button
             >
+              <li>Open your free account today</li>
+            </button>
           </div>
         </div>
         <div class="border-[1px] border-[#47474a]"></div>
 
-          <footer>
-        <div class="bg-[#37383D] pt-[5%] pb-[8%]">
-          <div class="flex justify-center items-center flex-col gap-14">
-            <div>
-              <ol class="flex justify-around items-center gap-12 text-white">
-                <li>About</li>
-                <li>Price</li>
-                <li>Terms of use</li>
-                <li>Privacy Policy</li>
-                <li>Careers</li>
-                <li>Blog</li>
-                <li>Contact Us</li>
-              </ol>
+        <footer>
+          <div class="bg-[#37383D] pt-[5%] pb-[8%]">
+            <div class="flex justify-center items-center flex-col gap-14">
+              <div>
+                <ol class="flex justify-around items-center gap-12 text-white">
+                  <li>About</li>
+                  <li>Price</li>
+                  <li>Terms of use</li>
+                  <li>Privacy Policy</li>
+                  <li>Careers</li>
+                  <li>Blog</li>
+                  <li>Contact Us</li>
+                </ol>
+              </div>
+              <div>
+                <img src="./img/icon.png" alt="" />
+              </div>
+              <h3>
+                <span class="text-[#6f6c6c]">© Copyright by</span>
+                <span class="text-white">Sahazid Hossen</span>
+              </h3>
             </div>
-            <div>
-              <img src="./img/icon.png" alt="" />
-            </div>
-            <h3>
-              <span class="text-[#6f6c6c]">© Copyright by</span>
-              <span class="text-white">Sahazid Hossen</span>
-            </h3>
           </div>
-        </div>
-      </footer>
+        </footer>
       </section>
-
-    
-
-   
-
     </main>
-
-    
 
     <script src="./script.js"></script>
   </body>

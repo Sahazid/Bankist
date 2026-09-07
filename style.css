@@ -43,3 +43,16 @@ body
 .nav-btns button:hover {
     opacity: 1;
 }
+
+.btn-animation
+{
+    transform: translateY(-10px);
+    transition:  transform 0.5s;
+}
+
+
+.hide
+{
+    display: hidden;
+   
+}
